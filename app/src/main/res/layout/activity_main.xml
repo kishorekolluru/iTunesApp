@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="mad.kishore.org.itunesapp.MainActivity">
+<ImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:id="@+id/imageRefresh"
+    android:scaleType="fitCenter"
+    android:src="@mipmap/refresh_icon"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:id="@+id/tvToggleStatus"
+        android:layout_toLeftOf="@+id/switchOrder"
+        android:textSize="17sp"
+        />
+    <Switch
+        android:id="@+id/switchOrder"
+
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="16dp"
+        android:showText="true"
+        android:text=""
+        android:textOff="D"
+        android:textOn="A"
+        android:textSize="17sp" />
+
+
+    <TextView
+        android:text="Filtered Apps:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lview"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewFilteredApps"
+        android:textStyle="normal|bold"
+        android:textSize="17sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewFilteredApps"></android.support.v7.widget.RecyclerView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:id="@+id/lview"
+        android:layout_below="@+id/imageRefresh"
+        android:layout_alignParentStart="true">
+
+    </ListView>
+
+</RelativeLayout>
